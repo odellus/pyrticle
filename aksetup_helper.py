@@ -50,8 +50,8 @@ class PyUblasExtension(NumpyExtension):
         from imp import find_module
         file, pathname, descr = find_module(name)
         from os.path import join, exists
-        installed_path = join(pathname, "..", "include")
-        development_path = join(pathname, "..", "src", "cpp")
+        installed_path = join(pathname, "include")
+        development_path = join(pathname, "src", "cpp")
         if exists(installed_path):
             return installed_path
         elif exists(development_path):
